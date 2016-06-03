@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+    <button>tick</button>
+    <input>
+    <script src="js/simple-genetics.js"></script>
+    <script>
+      var g = new SimpleGenetics({
+        length: 2,
+        fitness: function (ctx, genes) {
+
+          var w = genes[0];
+          var h = genes[1];
+
+          ctx.strokeRect(128 - w / 2, 128 - h / 2, w, h);
+          return -Math.abs(8000 - w * h) - 10 * (w + h);
+        }
+      });
+      document.querySelector('button').addEventListener('click', function () {
+        function tick() {
+          g.tick();
+          document.querySelector('input').value = g.genes;
+          setTimeout(tick, 10);
+        }
+        tick();
+      });
+    </script>
+  </body>
+</html>
