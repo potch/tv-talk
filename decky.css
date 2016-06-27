@@ -69,7 +69,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 1em;
-  padding-bottom: 1.25em;
+  padding-bottom: 3em;
 
   justify-content: center;
   align-items: center;
@@ -316,11 +316,13 @@ section.css {
   padding-bottom: 3em;
 }
 section.css:after {
-  content: url(img/css.svg);
-  width: 5em;
+  content: 'CSS';
+  color: #1CCCFF;
+  font:normal 10vw true_crimesregular;
+  transform: perspective(20vw) rotateY(-15deg) rotateX(2deg) skewY(-10deg) translate(-.2em, .1em);
   position: absolute;
-  right: 1em;
-  bottom: 1em;
+  left: 1em;
+  top: .5em;
 }
 
 .asotv {

@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="decky.css">
     <link rel="stylesheet" href="solarized_light.css">
     <link rel="stylesheet" href="truecrimes_regular_macroman/stylesheet.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="highlight.min.js"></script>
+    <style>
+    </style>
   </head>
   <body>
     <section class="full" style="background: #f8f899;">
@@ -27,12 +28,13 @@
       <img src="img/boitano.jpg">
     </section>
 
-    <section>
-      <img src="img/teevee.jpg">
+    <section style="flex-direction: row; align-items: center;">
+      <img src="img/mozilla_wordmark.svg">
+      <div style="font-size: 7em;margin-top: 0em;margin-right: .2em"></div>
     </section>
 
     <section>
-      <img src="img/mozilla_wordmark.svg">
+      <img src="img/dinosaurs.jpg">
     </section>
 
     <section>
@@ -98,7 +100,7 @@
     </section>
 
     <section>
-      <h1>&ldquo;How do I get on the TV?&rdquo;</h1>
+      <h1>&ldquo;How do I get on TV?&rdquo;</h1>
     </section>
 
     <section>
@@ -114,10 +116,13 @@
       <a class="note" href="https://www.google.com/design/spec-tv/design-principles/designing-for-tv.html">https://www.google.com/design/spec-tv/design-principles/designing-for-tv.html</a>
     </section>
     <section>
+      <h1>TVs are far away mobile phones</h1>
+    </section>
+    <section>
       <h1>TVs are far away mobile phones you can't touch.</h1>
     </section>
     <section>
-      <img src="img/css.svg" style="max-height:8em">
+      <h1 style="color: #1CCCFF;font:normal 30vw true_crimesregular;transform: perspective(20vw) rotateY(-15deg) rotateX(2deg) skewY(-10deg) translate(-.2em, .1em);">CSS<h1>
     </section>
     <section class="css">
       <h1>Viewport Units</h1>
@@ -168,7 +173,7 @@
     </section>
 
     <section>
-      <h1>How do I get on the TV?</h1>
+      <h1>How do I get the Web on my TV?</h1>
     </section>
 
     <section>
@@ -180,6 +185,25 @@
     </section>
     <section>
       <img src="img/Chromecast-2015.jpg" style="mix-blend-mode: darken;">
+    </section>
+    <section style="font-size: .5em;">
+      <h1>Setup Instructions</h1>
+      <ul>
+        <li>Just check out the code from GitHub, host chromehellotext.html on your own server and open that page in your Chrome browser</li>
+        <li>If you don't want to use the sample App ID, you need to do the following steps</li>
+        <li>Get a Chromecast device and get it set up for development: <a href="https://developers.google.com/cast/docs/developers#Get_started">https://developers.google.com/cast/docs/developers#Get_started</a></li>
+        <li>Register an application on the Developers Console (<a href="http://cast.google.com/publish">http://cast.google.com/publish</a>). Select the Custom Receiver option and specify the URL to where you are hosting the receiver.html file (You can use Google Drive to host your files: <a href="https://support.google.com/drive/answer/2881970?hl=en">https://support.google.com/drive/answer/2881970?hl=en</a>). You will get an App ID when you finish registering your application.</li>
+        <li>Setup the project dependencies</li>
+        <li>Insert your App ID in the chromehellotext.html file of the project (look for applicationID in that file)</li>
+        <li>Upload the chromehellotext.html file to your hosting server and load the URL for that file in your Chrome browser.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Dependencies</h2>
+      <ul>
+        <li>Chrome browser.</li>
+        <li>Google Cast Extension: <a href="https://chrome.google.com/webstore/detail/google-cast/boadgeojelhgndaghljhdicfkmllpafd">https://chrome.google.com/webstore/detail/google-cast/boadgeojelhgndaghljhdicfkmllpafd</a></li>
+      </ul>
     </section>
     <section>
       <img src="img/fire-stick.jpg" style="mix-blend-mode: darken;">
@@ -202,8 +226,14 @@
 
     <section>
       <h1>mDNS</h1>
+      <h3>zeroconf, Bonjour</h3>
       <div>Local broadcast discovery</div>
       <code>otherdevice.local</code>
+    </section>
+
+    <section>
+      <img src="img/flyweb.png">
+      <h2>FlyWeb (experimental)</h2>
     </section>
 
     <section>
@@ -224,18 +254,20 @@
     </section>
 
     <section>
-      <h1>Why fight the mess?</h1>
+      <h1>Why bother today?</h1>
     </section>
 
     <section>
       <img src="img/asotv.svg" style="max-height: 80%">
     </section>
 
-    <section>
+    <section style="font-size: .8em">
       <h1>Thanks!</h1>
-      Links:
+      <a href="https://twitter.com/potch">@potch</a>
+      <a href="https://potch.github.io/tv-talk/">https://potch.github.io/tv-talk/ (these slides)</a>
       <a href="https://github.com/mozilla/corsica">Corsica project on GitHub</a>
       <a href="https://www.google.com/design/spec-tv/design-principles/designing-for-tv.html">Android Documentation, "Designing for TV"</a>
+      <a href="https://developer.amazon.com/appsandservices/solutions/platforms/webapps/docs/getting-started-with-web-apps-for-fire-tv">Getting Started with Web Apps for Fire TV</a>
     </section>
 
     <footer>
@@ -289,7 +321,7 @@
         }
       };
       function update() {
-        var time = ((Date.now() - sTime) / (20 * 60 * 1000)) * 100 + '%';
+        var time = ((Date.now() - sTime) / (25 * 60 * 1000)) * 100 + '%';
         timeProgress.style.width = time;
       }
     </script>
